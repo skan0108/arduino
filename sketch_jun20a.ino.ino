@@ -30,15 +30,14 @@ void loop()
   int digitalValue = digitalRead(2);
   if (sensorValue > 90 || digitalValue == 1)
   {
-    digitalWrite(9, HIGH);
+    digitalWrite(8, HIGH);
   }
   else
-    digitalWrite(9, LOW);
+    digitalWrite(8, LOW);
   Serial.print("Gas sensor: ");
   Serial.println(sensorValue, DEC); // prints the value read
   // Serial.println(digitalValue, DEC);
   
-  float converted = 0.00;
     
   //Read data and store it to variables hum and temp
   hum = dht.readHumidity();
